@@ -1,14 +1,24 @@
-import React from 'react'
-import Character from './Character'
-import './Character.css'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Character from './Character';
 
-const CharacterList = props => {
+const CharacterList = () => {
+    const [chars, setChars] = useState([])
+    useEffect(() => {
+        axios
+        .get('https://rickandmortyapi.com/')
+        .then(response => {
+            console.log(response);
+            setChars(response.data)
+        })
+        .catch(error => console.log("Error!", error));
+    }, []);
     return (
-        <div clasName = 'list-container'>
-            {props.starwarsChars.map(char =>(
-                <Character char = {char} />
+        <div clasName ='char'>
+            {chars.map(char => (
+                <Character key={char.id} char={char}/>
             ))}
-        </div>
-    );
+            </div>
+    );   
 };
 export default CharacterList;
