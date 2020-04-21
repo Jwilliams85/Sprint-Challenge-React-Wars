@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Character from './Character';
-
+import { Container, Row } from 'reactstrap';
 const CharacterList = () => {
     const [chars, setChars] = useState([])
     useEffect(() => {
@@ -14,11 +14,13 @@ const CharacterList = () => {
         .catch(error => console.log("Error!", error));
     }, []);
     return (
-        <div clasName ='char'>
+        <Container>
+            <Row>
             {chars.map(char => (
                 <Character key={char.id} char={char}/>
             ))}
-            </div>
+            </Row>
+            </Container>
     );   
 };
 export default CharacterList;

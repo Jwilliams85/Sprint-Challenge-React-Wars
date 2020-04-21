@@ -18,13 +18,17 @@ const App = () => {
       .catch(error => console.log("Error!", error));
   }, []);
   return (
+    
       <div className ='char'>
+        <h1>Rick and Morty Character Cards</h1>
            {chars.map((banana,x) => {
              return (
               <Character key={x} a={banana}/>
+              
              )
         
              })} 
+             
           </div>
   );   
     
