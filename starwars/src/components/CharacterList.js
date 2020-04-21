@@ -9,7 +9,7 @@ const CharacterList = () => {
         .get('https://rickandmortyapi.com/')
         .then(response => {
             console.log(response);
-            setChars(response.data)
+            setChars(response.data.message)
         })
         .catch(error => console.log("Error!", error));
     }, []);
