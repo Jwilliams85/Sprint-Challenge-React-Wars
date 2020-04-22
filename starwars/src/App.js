@@ -10,7 +10,7 @@ const App = () => {
   const [chars, setChars] = useState([])
   useEffect(() => {
       axios
-      .get('https://rickandmortyapi.com/api/character')
+      .get('https://swapi.py4e.com/api/people/')
       .then(response => {
           console.log(response.data.results);
           setChars(response.data.results)
@@ -20,7 +20,7 @@ const App = () => {
   return (
     
       <div className ='char'>
-        <h1>Rick and Morty Character Cards</h1>
+        <h1>StarWars Character Cards</h1>
            {chars.map((banana,x) => {
              return (
               <Character key={x} a={banana}/>

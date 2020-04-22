@@ -10,6 +10,7 @@ const Card = styled.div`
     padding: 30px;
     margin:30px;
     background: lightblue;
+    
 `;
 
 
@@ -20,11 +21,11 @@ const Character = props => {
    
      <Card>
         <h2>{props.a.name}</h2>
-        <p>{props.a.status}</p>
-     <div className = "bottom">
         <p>{props.a.gender}</p>
-            <p>{props.a.origin.name}</p>
-             <p>{props.a.location.name}</p>
+     <div className = "bottom">
+        <p>{props.a.height}</p>
+            <p>{props.a.hair_color}</p>
+             <p>{props.a.skin_color}</p>
           </div> 
         </Card>
       
