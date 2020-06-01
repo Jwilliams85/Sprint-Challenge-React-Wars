@@ -21,12 +21,16 @@ const CharacterList = () => {
         })
         .catch(error => console.log("Error!", error));
     }, []);
+
+    
+
     return (
       
             <CardRow>
             {chars.map(char => (
                 <Character key={char.id} char={char}/>
             ))}
+             
             </CardRow>
          
     );   

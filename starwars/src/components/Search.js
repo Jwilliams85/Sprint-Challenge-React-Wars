@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import searchStyling from './Search.css'
 
 const Search = (props) => {
   const [searchValue, setSearchValue] = useState("");
@@ -24,6 +24,7 @@ const Search = (props) => {
           value={searchValue}
           onChange={handleSearchInputChanges}
           type="text"
+          placeholder = "Type..."
         />
         <input onClick={callSearchFunction} type="submit" value="SEARCH" />
       </form>

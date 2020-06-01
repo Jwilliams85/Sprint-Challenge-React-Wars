@@ -8,6 +8,8 @@ import Search from './components/Search'
 const CardRow = styled.div`
 display:flex;
 flex-wrap:wrap;
+color:blue;
+text-align:center;
 
 `;
 
@@ -28,8 +30,9 @@ const App = () => {
     
 
       <CardRow className ='char'>
-        <Search/>
-        <h1>StarWars Character Cards</h1>
+        
+        <h1 className = 'title'> StarWars Character Cards</h1>
+        <Search/> 
            {chars.map((response,x) => {
              return (
               <Character key={x} a={response}/>
