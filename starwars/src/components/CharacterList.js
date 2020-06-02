@@ -4,11 +4,6 @@ import Character from './Character';
 import { Container } from 'reactstrap';
 import styled from 'styled-components';
 
-const CardRow = styled.div`
-display:flex;
-flex-wrap:wrap;
-
-`;
 
 const CharacterList = () => {
     const [chars, setChars] = useState([])
